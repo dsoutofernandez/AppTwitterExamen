@@ -28,15 +28,18 @@ public class Metodos {
      * Recibe los parametros necesarios para utilizar una cuenta
      */
     public Metodos(){
-    ConfigurationBuilder cb = new ConfigurationBuilder();
+    /*ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
         .setOAuthConsumerKey("5yqwH2WcqZ3YlkE0W8BLYkeoW")
         .setOAuthConsumerSecret("s5s5QGigqzULDGbbQs4Rm0pKdqLEefbO4gCh53XgcnA0RoMA9n")
         .setOAuthAccessToken("3055143533-jeaPEtFscvDMVKwPVLubxkmHs9DzCjZ2eIoWdcQ")
         .setOAuthAccessTokenSecret("NzIM687NlVRe3VxKh0a0xRRYpsGytrSEKISaqpuQGtTZL");
 
-   twitter = new TwitterFactory(cb.build()).getInstance();
+   twitter = new TwitterFactory(cb.build()).getInstance();*/
+        
+        twitter= new TwitterFactory("twitter4j.properties").getInstance();
     }
+    
     /**
      * Metodo que permite ver el Time Line de Twitter
      * @throws TwitterException 
