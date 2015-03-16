@@ -5,6 +5,7 @@
  */
 package apptwitter;
 
+import java.util.List;
 import twitter4j.DirectMessage;
 import twitter4j.Query;
 import twitter4j.QueryResult;
@@ -24,6 +25,7 @@ public class Metodos {
     
     /**
      * Generamos constructor por defecto
+     * Recibe los parametros necesarios para utilizar una cuenta
      */
     public Metodos(){
     ConfigurationBuilder cb = new ConfigurationBuilder();
@@ -35,8 +37,20 @@ public class Metodos {
 
    twitter = new TwitterFactory(cb.build()).getInstance();
     }
+    /**
+     * Metodo que permite ver el Time Line de Twitter
+     * @throws TwitterException 
+     */
+    public void verTimeLine() throws TwitterException{
     
+        List<Status> statuses = twitter.getHomeTimeline();
+    System.out.println("Showing home timeline.");
+    for (Status status : statuses) {
+        System.out.println(status.getUser().getName() + ":" +
+                           status.getText());
+    }
     
+    }
     
     
 }
