@@ -17,6 +17,7 @@ public class AppTwitter {
 
     /**
      * @param args the command line arguments
+     * @throws twitter4j.TwitterException
      */
     public static void main(String[] args) throws TwitterException {
         // TODO code application logic here
@@ -27,15 +28,15 @@ public class AppTwitter {
         Metodos obj1 = new Metodos();
         
         //LLamamos a los metodos
+        //Vemos TimeLine
         obj1.verTimeLine();
         busqueda  =JOptionPane.showInputDialog("Introduce lo que deseas buscar:");
-                
+        //Buscamos Trending o Topics
         obj1.buscarTrending(busqueda);
         
         tweet = JOptionPane.showInputDialog("Introduce un tweet:");
-        
+        //"Tweeteamos"
         obj1.tweetear(tweet);
-        
         
     }
     
