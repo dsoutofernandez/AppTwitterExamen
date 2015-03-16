@@ -51,6 +51,21 @@ public class Metodos {
     }
     
     }
+    /**
+     * Meotodo que permite buscar de lo que se está "hablando".
+     * Busqueda de topics
+     * @param busqueda
+     * @throws TwitterException 
+     */
+    public void buscarTrending(String busqueda) throws TwitterException{
+        
+         Query query = new Query(busqueda);
+    QueryResult result = twitter.search(query);
+    for (Status status : result.getTweets()) {
+        System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+    }
+
+    }
     
     
 }
