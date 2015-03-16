@@ -21,12 +21,12 @@ public class AppTwitter {
     public static void main(String[] args) throws TwitterException {
         // TODO code application logic here
         
+        //Creamos variables de texto que usaremos para completar
         String busqueda,tweet;
+        //Creamos objeto de tipo Metodos con el que acceder a los metodos
         Metodos obj1 = new Metodos();
         
-        
-        //obj1.verTL();
-        
+        //LLamamos a los metodos
         obj1.verTimeLine();
         busqueda  =JOptionPane.showInputDialog("Introduce lo que deseas buscar:");
                 
