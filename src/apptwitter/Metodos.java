@@ -44,7 +44,7 @@ public class Metodos {
     public void verTimeLine() throws TwitterException{
     
         List<Status> statuses = twitter.getHomeTimeline();
-    System.out.println("Showing home timeline.");
+    System.out.println("Mostrando tu Time Line:");
     for (Status status : statuses) {
         System.out.println(status.getUser().getName() + ":" +
                            status.getText());
@@ -74,7 +74,7 @@ public class Metodos {
     public void tweetear(String tweet) throws TwitterException{
         
     Status status = twitter.updateStatus(tweet);
-    System.out.println("Successfully updated the status to [" + status.getText() + "].");
+    System.out.println("Has tweeteado correctamente :D!! ) [" + status.getText() + "].");
     
     }
 }
